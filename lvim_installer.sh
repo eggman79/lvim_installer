@@ -52,4 +52,7 @@ vim.g.python3_host_prog = '$HOME/.pyenv/versions/$last_python_ver/bin/python3'
 vim.g.loaded_perl_provider = 0
 EOL
 
+curl -fsSL https://raw.githubusercontent.com/getnf/getnf/main/install.sh | bash
+fc-cache
+
 lvim +LvimUpdate +LvimSyncCorePlugins +q
