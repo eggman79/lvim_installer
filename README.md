@@ -1,1 +1,1 @@
-# lvim_installer
+# lvim_setup
