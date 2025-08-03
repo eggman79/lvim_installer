@@ -228,7 +228,7 @@ log_info "Step 7: Installing LunarVim..."
 # Install LunarVim using the official installer script
 # Using specific branch for Neovim 0.9 compatibility
 log_info "Running LunarVim installer..."
-LV_BRANCH='release-1.4/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.4/neovim-0.9/utils/installer/install.sh)
+LV_BRANCH='release-1.4/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.4/neovim-0.9/utils/installer/install.sh) -y
 check_status "LunarVim installation"
 
 #################################################################################
