@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#################################################################################
+################################################################################
 # LunarVim Installer Script with Enhanced Logging and Comments
 # 
 # This script installs LunarVim (a Neovim IDE layer) with all required dependencies:
@@ -107,7 +107,7 @@ cat >>$bashrc << 'EOL'
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - bash)"
-export PATH="$PATH:/opt/nvim-linux64/bin:$HOME/.local/bin"
+export PATH="$PATH:/opt/nvim-linux64/bin:$HOME/.local/bin:$HOME/.cargo/bin"
 EOL
 
 # Remove problematic PS1 check that can interfere with non-interactive shells
