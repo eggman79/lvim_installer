@@ -76,7 +76,7 @@ check_status "Package upgrade"
 
 # Install all required system dependencies for building Python, Node.js, and other tools (non-interactive)
 log_info "Installing system dependencies..."
-apt install -y -qq tmux git curl g++ cmake automake vim zlib1g-dev libssl-dev openssl bzip2 libbz2-dev libncurses5-dev libncursesw5-dev libffi-dev libreadline-dev sqlite3 libsqlite3-dev liblzma-dev ruby-full fontconfig
+apt install -y -qq tmux git curl g++ cmake automake vim zlib1g-dev libssl-dev openssl bzip2 libbz2-dev libncurses5-dev libncursesw5-dev libffi-dev libreadline-dev sqlite3 libsqlite3-dev liblzma-dev ruby-full fontconfig sudo
 check_status "System dependencies installation"
 
 # Set C++ compiler environment variable (required for some Python packages)
@@ -161,7 +161,7 @@ log_info "Step 3: Setting up Ruby Neovim provider..."
 
 # Install Ruby Neovim provider (non-interactive)
 log_info "Installing Ruby Neovim provider..."
-gem install neovim --no-document
+sudo gem install neovim --no-document
 check_status "Ruby Neovim provider installation"
 
 #################################################################################
@@ -217,7 +217,7 @@ rm -rf /opt/nvim
 
 # Extract Neovim to /opt directory
 log_info "Extracting Neovim to /opt..."
-tar -C /opt -xzf $nvim_zip
+sudo tar -C /opt -xzf $nvim_zip
 check_status "Neovim extraction"
 
 #################################################################################
